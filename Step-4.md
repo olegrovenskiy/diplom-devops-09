@@ -16,6 +16,19 @@ https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
 Воспользовался пакетом kube-prometheus, который уже включает в себя Kubernetes оператор для grafana, prometheus, alertmanager и node_exporter.
 Использовал официальную документацию https://prometheus-operator.dev/docs/prologue/quick-start/
 
+    root@mck-diplom-k8s-cp1:~# kubectl get services -n monitoring
+    NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+    alertmanager-main       ClusterIP   10.233.61.115   <none>        9093/TCP,8080/TCP            117m
+    alertmanager-operated   ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP   117m
+    blackbox-exporter       ClusterIP   10.233.6.176    <none>        9115/TCP,19115/TCP           117m
+    grafana                 ClusterIP   10.233.2.0      <none>        3000/TCP                     117m
+    kube-state-metrics      ClusterIP   None            <none>        8443/TCP,9443/TCP            117m
+    node-exporter           ClusterIP   None            <none>        9100/TCP                     117m
+    prometheus-adapter      ClusterIP   10.233.21.231   <none>        443/TCP                      117m
+    prometheus-k8s          ClusterIP   10.233.31.87    <none>        9090/TCP,8080/TCP            117m
+    prometheus-operated     ClusterIP   None            <none>        9090/TCP                     117m
+    prometheus-operator     ClusterIP   None            <none>        8443/TCP                     117m
+    root@mck-diplom-k8s-cp1:~#
 
 http://51.250.3.203:3000/?orgId=1
 admin / 0ber0n@2022
