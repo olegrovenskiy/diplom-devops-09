@@ -44,29 +44,29 @@ https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
 Делаем тестовый манифест:
 
 
-  apiVersion: v1
-  kind: Pod
-  metadata:
-   name: test-nginx-diplom
-  spec:
-   containers:
-   - name: test-nginx-diplom
-     image: cr.yandex/crpafmldih9te92441ft/nginx:diplom
-   imagePullSecrets:
-   - name: regcred
+    apiVersion: v1
+    kind: Pod
+    metadata:
+     name: test-nginx-diplom
+    spec:
+     containers:
+     - name: test-nginx-diplom
+       image: cr.yandex/crpafmldih9te92441ft/nginx:diplom
+     imagePullSecrets:
+     - name: regcred
 
 Запускаем и проверяем под
 
-  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl apply -f ./test-nginx.yaml
-  pod/test-nginx-diplom created
-  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
-  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
-  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
-  NAME                READY   STATUS              RESTARTS   AGE
-  test-nginx-diplom   0/1     ContainerCreating   0          9s
-  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
-  NAME                READY   STATUS    RESTARTS   AGE
-  test-nginx-diplom   1/1     Running   0          12s
+    root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl apply -f ./test-nginx.yaml
+    pod/test-nginx-diplom created
+    root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+    root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+    root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
+    NAME                READY   STATUS              RESTARTS   AGE
+    test-nginx-diplom   0/1     ContainerCreating   0          9s
+    root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
+    NAME                READY   STATUS    RESTARTS   AGE
+    test-nginx-diplom   1/1     Running   0          12s
 
 Под  запустился, образ успешно скачен, значить можно готовить деплоймент
 
