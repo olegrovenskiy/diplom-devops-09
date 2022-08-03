@@ -59,17 +59,30 @@ https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
 
 Запускаем и проверяем под
 
-        root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl apply -f ./test-nginx.yaml
-        pod/test-nginx-diplom created
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl apply -f ./test-nginx-depl.yaml
+  deployment.apps/test-nginx-diplom created
+  service/test-nginx-diplom created
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx#
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
+  NAME                                 READY   STATUS    RESTARTS   AGE
+  test-nginx-diplom-578479f76f-fmj8m   1/1     Running   0          18s
+  test-nginx-diplom-578479f76f-h42dg   1/1     Running   0          18s
+  test-nginx-diplom-578479f76f-ttkdt   1/1     Running   0          18s
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods -o wide
+  NAME                                 READY   STATUS    RESTARTS   AGE   IP             NODE                 NOMINATED NODE   READINESS GATES
+  test-nginx-diplom-578479f76f-fmj8m   1/1     Running   0          31s   10.233.123.4   mck-diplom-k8s-wn2   <none>           <none>
+  test-nginx-diplom-578479f76f-h42dg   1/1     Running   0          31s   10.233.124.3   mck-diplom-k8s-wn1   <none>           <none>
+  test-nginx-diplom-578479f76f-ttkdt   1/1     Running   0          31s   10.233.123.5   mck-diplom-k8s-wn2   <none>           <none>
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# curl localhost:8088
+  curl: (7) Failed to connect to localhost port 8088: Connection refused
+  root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get services
+  NAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+  kubernetes          ClusterIP   10.233.0.1     <none>        443/TCP          36h
+  test-nginx-diplom   NodePort    10.233.13.11   <none>        8088:32756/TCP   69s
 
-      
-      
-        root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
-        NAME                READY   STATUS              RESTARTS   AGE
-        test-nginx-diplom   0/1     ContainerCreating   0          9s
-        root@mck-diplom-k8s-cp1:~/diplom/test-nginx# kubectl get pods
-        NAME                READY   STATUS    RESTARTS   AGE
-        test-nginx-diplom   1/1     Running   0          12s
 
 Под  запустился, образ успешно скачен, значить можно готовить деплоймент
 
