@@ -13,11 +13,18 @@ https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
 
 ## 2. Http доступ к web интерфейсу grafana.
 
+Воспользовался пакетом kube-prometheus, который уже включает в себя Kubernetes оператор для grafana, prometheus, alertmanager и node_exporter.
+Использовал официальную документацию https://prometheus-operator.dev/docs/prologue/quick-start/
 
+
+http://51.250.3.203:3000/?orgId=1
+admin / 0ber0n@2022
 
 ## 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
 
+http://51.250.3.203:3000/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s
 
+![sonar1](https://github.com/olegrovenskiy/diplom-devops-09/blob/main/grafana.png)
 
 ## 4. Http доступ к тестовому приложению.
 
