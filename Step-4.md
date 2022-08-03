@@ -2,7 +2,7 @@
 
 Ожидаемый результат:
 
-Git репозиторий с конфигурационными файлами для настройки Kubernetes.
+## 1. Git репозиторий с конфигурационными файлами для настройки Kubernetes.
 
 https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
 
@@ -11,7 +11,13 @@ https://github.com/olegrovenskiy/diplom-k8s-config/tree/master
  ansible-playbook -i inventory/yandexcloud/inventory.ini cluster.yml --become --become-user=root
 
 
-Http доступ к web интерфейсу grafana.
-Дашборды в grafana отображающие состояние Kubernetes кластера.
-Http доступ к тестовому приложению.
+## 2. Http доступ к web интерфейсу grafana.
+
+
+
+## 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
+
+
+
+## 4. Http доступ к тестовому приложению.
 
