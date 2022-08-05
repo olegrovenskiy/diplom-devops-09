@@ -50,6 +50,16 @@
         - kubectl apply -f ./deploy-test-app.yaml
         - kubectl get pods
 
+Использованно: 
 
+документация https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_workflow.html#update-your-gitlab-ciyml-file-to-run-kubectl-commands
+GitLab CI/CD SaaS был подготовлен ранее на блоен CI/CD
+Дополнительно https://stackoverflow.com/questions/51196435/gitlab-ci-docker-command-not-found
+
+Проверка работы приложения
+
+http://51.250.3.203:32757/images/1.jpg
+
+![sonar1](https://github.com/olegrovenskiy/diplom-devops-09/blob/main/aplicat.png)
 
 
