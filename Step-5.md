@@ -50,6 +50,8 @@
         - kubectl apply -f ./deploy-test-app.yaml
         - kubectl get pods
 
+
+По умолчанию при комите в ветке main происходит build с пушем нового образа, и deploy 
 Использованно: 
 
 документация https://docs.gitlab.com/ee/user/clusters/agent/ci_cd_workflow.html#update-your-gitlab-ciyml-file-to-run-kubectl-commands
