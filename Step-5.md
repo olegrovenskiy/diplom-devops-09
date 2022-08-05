@@ -65,3 +65,11 @@ http://51.250.3.203:32757/images/1.jpg
 ![sonar1](https://github.com/olegrovenskiy/diplom-devops-09/blob/main/aplicat.png)
 
 
+
+- добавление 
+        when: manual
+в stage deploy .gitlab-ci.yml file обеспечивает только прохождение автоматичаской сборки образа при комитах в репозитории, что соответствует пункту задания.
+
+
+
+
