@@ -220,6 +220,8 @@ http://51.250.3.203:32757/images/1.jpg
 
 
 
+Для проброса переменных использовал : https://stackoverflow.com/questions/56705484/how-to-pass-gitlab-ci-cd-variables-to-kubernetesaks-deployment-yaml
+
 
 
 
