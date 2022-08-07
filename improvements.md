@@ -27,7 +27,7 @@ http://51.250.3.203:3000/?orgId=1 с логином/паролем admin / admin
         - docker tag app-nginx cr.yandex/crpafmldih9te92441ft/app-nginx:${CI_COMMIT_BRANCH}
         - docker login --username oauth --password AQAAAABapegEAATuwQiNejL4zEschjtrCjlWlqU cr.yandex
         - docker push cr.yandex/crpafmldih9te92441ft/app-nginx:${CI_COMMIT_BRANCH}
-        - echo "MAIN-MAIN"
+
 
 Результат
 
